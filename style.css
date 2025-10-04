@@ -11,15 +11,32 @@ body{
  margin: 0;
  background-color: rgb(54, 0, 0);
 }
+
 a{color: rgb(230, 211, 0);text-decoration: none;
 }
 
-h2{ font-size: 30px;
+h2{ 
+ font-size: 30px;
  margin: 0px;
  color:white;
- text-shadow: 0 0 10px #fffb00, 0 0 20px #886400;
- font-family: "Indie Flower", cursive;}
-input{
+ text-shadow: 0 0 10px #fffb00, 0 0 20px #886400, 0 0 30px #ff0000;
+ font-family: "Indie Flower", cursive;
+ animation: flameTitle 1.5s infinite alternate;
+}
+
+@keyframes flameTitle {
+    0% {
+        text-shadow: 0 0 10px #fffb00, 0 0 20px #ff6600, 0 0 30px #ff0000;
+    }
+    50% {
+        text-shadow: 0 0 15px #fff000, 0 0 25px #ff3300, 0 0 35px #ff0000;
+    }
+    100% {
+        text-shadow: 0 0 10px #fffb00, 0 0 20px #ff6600, 0 0 30px #ff0000;
+    }
+}
+
+input{  
 font-family: 'Roboto', sans-serif; /* Fuente */
 background-color: yellow;
 color: red;
@@ -28,11 +45,22 @@ margin-bottom: 5px;
 font-size: 15px;
 border-radius: 200px;
 border: 2px solid red;
-}::placeholder{color: red; font-size: 15px;}
+transition: all 0.3s ease;
+}
+
+::placeholder{
+color: red;
+font-size: 15px;}
+
 input:focus {
     outline: none;
-    box-shadow: 0 0 15px red;
-    border-color:red;
+    animation: flameInput 1s infinite alternate;
+}
+
+@keyframes flameInput {
+    0% { box-shadow: 0 0 10px red, 0 0 20px orange, 0 0 30px yellow; }
+    50% { box-shadow: 0 0 15px red, 0 0 25px orange, 0 0 35px yellow; }
+    100% { box-shadow: 0 0 10px red, 0 0 20px orange, 0 0 30px yellow; }
 }
 
 button{
@@ -44,10 +72,40 @@ margin-bottom: 5px;
 font-size: 15px;
 border-radius: 200px;
 border: 0;
-}button:focus {
+transition: all 0.3s ease;
+}
+
+button:focus {
     outline: none;
-    box-shadow: 0 0 15px yellow;
-    border-color:yellow;
+    animation: flameButton 1s infinite alternate;
+}
+
+@keyframes flameButton {
+    0% { box-shadow: 0 0 10px yellow, 0 0 20px orange, 0 0 30px red; }
+    50% { box-shadow: 0 0 15px yellow, 0 0 25px orange, 0 0 35px red; }
+    100% { box-shadow: 0 0 10px yellow, 0 0 20px orange, 0 0 30px red; }
+}
+
+/* Hover para botones */
+button:hover {
+    animation: flameButtonHover 1s infinite alternate;
+    cursor: pointer;
+}
+
+@keyframes flameButtonHover {
+    0% { box-shadow: 0 0 10px yellow, 0 0 20px orange, 0 0 30px red; }
+    50% { box-shadow: 0 0 15px yellow, 0 0 25px orange, 0 0 35px red; }
+    100% { box-shadow: 0 0 10px yellow, 0 0 20px orange, 0 0 30px red; }
+}
+
+/* Hover para links */
+a:hover {
+    text-shadow: 0 0 5px yellow, 0 0 10px orange, 0 0 15px red;
+    transition: all 0.3s ease;
+}
+input:hover {
+    cursor: text; /* opcional */
+    box-shadow: 0 0 8px orange, 0 0 15px yellow; /* efecto sutil al pasar el mouse */
 }
 
 #caja{
@@ -55,4 +113,24 @@ border: 0;
  padding: 25px 50px;
  border-radius: 200px;
  text-align: center;
+}
+/* Video de fondo */
+#fondoVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* cubre toda la pantalla */
+  z-index: -1; /* detrás de todo */
+}
+
+/* Contenido encima del video */
+#caja {
+  position: relative; /* para estar sobre el video */
+  background-color: rgba(0,0,0,0.7); /* semi-transparente */
+  padding: 25px 50px;
+  border-radius: 200px;
+  text-align: center;
+  z-index: 1;
 }
