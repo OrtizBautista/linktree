@@ -1,0 +1,58 @@
+body{
+ font-family: 'Roboto', sans-serif; /* Fuente */
+ background-image: url(./index/background.jpg);
+ background-repeat: no-repeat;
+ background-position: center;
+ background-size: cover;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ height: 100vh;
+ margin: 0;
+ background-color: rgb(54, 0, 0);
+}
+a{color: rgb(230, 211, 0);text-decoration: none;
+}
+
+h2{ font-size: 30px;
+ margin: 0px;
+ color:white;
+ text-shadow: 0 0 10px #fffb00, 0 0 20px #886400;
+ font-family: "Indie Flower", cursive;}
+input{
+font-family: 'Roboto', sans-serif; /* Fuente */
+background-color: yellow;
+color: red;
+padding: 10px 20px;
+margin-bottom: 5px;
+font-size: 15px;
+border-radius: 200px;
+border: 2px solid red;
+}::placeholder{color: red; font-size: 15px;}
+input:focus {
+    outline: none;
+    box-shadow: 0 0 15px red;
+    border-color:red;
+}
+
+button{
+font-family: 'Roboto', sans-serif; /* Fuente */
+background-color: red;
+color: yellow;
+padding: 10px 20px;
+margin-bottom: 5px;
+font-size: 15px;
+border-radius: 200px;
+border: 0;
+}button:focus {
+    outline: none;
+    box-shadow: 0 0 15px yellow;
+    border-color:yellow;
+}
+
+#caja{
+ background-color: rgba(0, 0, 0, 0.7);
+ padding: 25px 50px;
+ border-radius: 200px;
+ text-align: center;
+}
