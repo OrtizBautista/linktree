@@ -27,22 +27,48 @@
      <p id="mensaje"></p>
     </div>
 
-    <div id="links" style="display:none;">
-     <h2>Calculadora de IMC</h2>
-     <h3><a href="https://ortizbautista.github.io/imc/" target="_blank" aria-label="Ir al sitio web de IMC de Ortiz Bautista">https://ortizbautista.github.io/imc/</a></h3>
-     <h2>Calculadora de medidas</h2>
-     <h3><a href="https://ortizbautista.github.io/cdm/" target="_blank" aria-label="Ir al sitio web de CDM de Ortiz Bautista">https://ortizbautista.github.io/cdm/</a></h3>
-     <h2>Calculadora de monedas</h2>
-     <h3><a href="https://ortizbautista.github.io/cm/" target="_blank" aria-label="Ir al sitio web de CM de Ortiz Bautista">https://ortizbautista.github.io/cm/</a></h3> 
-     <h2>ToDo List</h2>
-     <h3><a href="https://ortizbautista.github.io/ToDo/" target="_blank" aria-label="Ir al sitio web de CM de Ortiz Bautista">https://ortizbautista.github.io/ToDo/</a></h3> 
-     <h2>Cuida a Gmail</h2>
-     <h3><a href="https://ortizbautista.github.io/gmail/" target="_blank" aria-label="Ir al sitio web de GMAIL de Ortiz Bautista">https://ortizbautista.github.io/gmail/</a></h3>
-     <h2>Perfil de GitHub</h2>
-     <h3><a href="https://github.com/OrtizBautista" target="_blank" aria-label="Ir al sitio web de CDM de Ortiz Bautista">https://github.com/OrtizBautista/</a></h3>
-     <button onclick="cerrarSesion()">Cerrar Sesión</button>
+<div id="links" style="display:none;" aria-live="polite">
+
+  <h1 id="tituloLinks">MIS PROYECTOS</h1>
+
+  <div class="links-grid">
+    <div class="link-card" role="listitem">
+      <h2>Calculadora de IMC</h2>
+      <a href="https://ortizbautista.github.io/imc/" target="_blank" rel="noopener" aria-label="Abrir Calculadora de IMC">https://ortizbautista.github.io/imc/</a>
     </div>
- </div>
+
+    <div class="link-card" role="listitem">
+      <h2>Calculadora de Medidas</h2>
+      <a href="https://ortizbautista.github.io/cdm/" target="_blank" rel="noopener" aria-label="Abrir Calculadora de Medidas">https://ortizbautista.github.io/cdm/</a>
+    </div>
+
+    <div class="link-card" role="listitem">
+      <h2>Calculadora de Monedas</h2>
+      <a href="https://ortizbautista.github.io/cm/" target="_blank" rel="noopener" aria-label="Abrir Calculadora de Monedas">https://ortizbautista.github.io/cm/</a>
+    </div>
+
+    <div class="link-card" role="listitem">
+      <h2>ToDo List</h2>
+      <a href="https://ortizbautista.github.io/ToDo/" target="_blank" rel="noopener" aria-label="Abrir ToDo List">https://ortizbautista.github.io/ToDo/</a>
+    </div>
+
+    <div class="link-card" role="listitem">
+      <h2>Cuida a Gmail</h2>
+      <a href="https://ortizbautista.github.io/gmail/" target="_blank" rel="noopener" aria-label="Abrir Cuida a Gmail">https://ortizbautista.github.io/gmail/</a>
+    </div>
+
+    <div class="link-card" role="listitem">
+      <h2>Perfil de GitHub</h2>
+      <a href="https://github.com/OrtizBautista" target="_blank" rel="noopener" aria-label="Abrir Perfil de GitHub">https://github.com/OrtizBautista</a>
+    </div>
+  </div>
+
+  <button id="cerrarBtn" onclick="cerrarSesion()">Cerrar Sesión</button>
+</div>
+
+
+
+
   <script src="script.js"></script>
 </body>
 </html>
